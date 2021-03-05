@@ -19,10 +19,11 @@ for i in range(1,n+1):
 for T in range (1,10001):
   if (totalValues * T > B):
     break
+
 if (T* totalValues <= B):
   T = -1
 
-if (T<1) or (T>10000):
+if (T>10000) or (T<1):
   T = -1
 # please do not modify the input and print statements
 # and make sure that your code does not have any other print statements

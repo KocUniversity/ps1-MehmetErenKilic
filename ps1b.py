@@ -19,8 +19,9 @@ for i in range(1,n+1):
 minValue = 0
 maxValue = 10000
 guessValue = (maxValue + minValue) /2
+
 if (maxValue*totalValues> B):
-  while (abs(guessValue*totalValues - B) > 0.0001):
+  while (abs(guessValue*totalValues - B) > 0.000001):
     if (guessValue*totalValues>B):
       maxValue = guessValue
     else:
@@ -28,7 +29,11 @@ if (maxValue*totalValues> B):
     guessValue = (maxValue + minValue) /2
   T = int((guessValue//1) + 1)
 
-if (T<1) or (T>10000):
+  if (T*totalValues <= B):
+    T += 1
+
+
+if (T>10000) or (T<1):
   T = -1
 # please do not modify the input and print statements
 # and make sure that your code does not have any other print statements
