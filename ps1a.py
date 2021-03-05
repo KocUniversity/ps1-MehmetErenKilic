@@ -19,6 +19,8 @@ for i in range(1,n+1):
 for T in range (1,10001):
   if (totalValues * T > B):
     break
+if (T* totalValues <= B):
+  T = -1
 
 if (T<1) or (T>10000):
   T = -1
